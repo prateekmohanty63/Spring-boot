@@ -37,6 +37,8 @@ public class Department {
         this.departmentCode = departmentCode;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long departmentId;
 
 
