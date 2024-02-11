@@ -41,8 +41,8 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/name/{name}")
-    public Department fetchDepartmentByName(@PathVariable("name") String departmentName){
-        return departmentService.fetchDepartmentByName(departmentName);
+    public Department findByDepartmentNameIgnoreCase(@PathVariable("name") String departmentName){
+        return departmentService.findByDepartmentNameIgnoreCase(departmentName);
     }
 
 }
