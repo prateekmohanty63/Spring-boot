@@ -48,9 +48,13 @@ public class DepartmentController {
        return  departmentService.updateDepartment(departmentId,department);
     }
 
+//    @GetMapping("/departments/name/{name}")
+//    public Department findByDepartmentNameIgnoreCase(@PathVariable("name") String departmentName){
+//        return departmentService.findByDepartmentNameIgnoreCase(departmentName);
+//    }
     @GetMapping("/departments/name/{name}")
-    public Department findByDepartmentNameIgnoreCase(@PathVariable("name") String departmentName){
-        return departmentService.findByDepartmentNameIgnoreCase(departmentName);
+    public Department fetchDepartmentByName(@PathVariable("name") String departmentName) {
+        return departmentService.fetchDepartmentByName(departmentName);
     }
 
 }
